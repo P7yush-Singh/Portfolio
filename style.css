@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: black;
+}
+.navbar{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar .logo{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.navbar .logo span{
+    color: aqua;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 2.5rem;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    position: relative;
+    font-size: 1rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+.navbar ul li a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #1390a7;
+    transition: 0.2s linear;
+}
+
+.navbar ul li a:hover::before{
+    width: 100%;
+}
+
+.navbar ul li a:hover{
+    color: #1071a8;
+}
+.main-container{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.main-container .right-con{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+.right-con h1{
+    font-weight: 700;
+}
+.right-con h1 span{
+    color: #1071a8;
+}
+.right-con .typewriter{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+}
+.right-con .typewriter .typewriter-text{
+    color: #1390a7;
+    font-weight: 800;
+}
+.main-container .left-con{
+    width: 450px;
+    height: 70vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #0a205e;
+}
+.main-container .left-con img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.main-container .left-con:hover{
+    box-shadow: 0 0 50px #69779c;
+}
+.main-container .left-con img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+.right-con .icons{
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.right-con .icons i{
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #0a205e;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.right-con .icons i:hover{
+    color: #1dafc9;
+    transform: scale(1.3);
+
+}
