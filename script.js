@@ -5,7 +5,9 @@ const texts = [
 ]
 
 let speed = 100;
+let xspeed = 50;
 const textElements = document.querySelector(".typewriter-text");
+const autowrite = document.querySelector(".auto-write");
 
 let textIndex = 0;
 let charcterIndex = 0;
@@ -33,4 +35,14 @@ function eraseText(){
     }
 }
 
-window.onload = typeWriter
+window.onload = typeWriter;
+
+const abtme = "I'm a programmer that want to be a Good Job without expecting any package from Company, I'm a dedicated Web Developer and I respect my skills that I learn in my college time"
+
+function autoWriter(){
+    if (charcterIndex < abtme.length){
+        autowrite.innerHTML += abtme.charAt(charcterIndex);
+        charcterIndex++;
+        setTimeout(autoWriter, xspeed); 
+    }
+}
